@@ -32,7 +32,22 @@ export default function RootLayout() {
     <Stack>
       <Stack.Screen name="index" options={{ headerShown: false }} />
       <Stack.Screen name="(auth)" options={{ headerShown: false }} />
-      <Stack.Screen name="(root)" options={{ headerShown: false }} />
+      <Stack.Screen
+        name="(root)/(tabs)/home"
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="(root)/(tabs)/chat"
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="(root)/(tabs)/profile"
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="(root)/(tabs)/rides"
+        options={{ headerShown: false }}
+      />
       <Stack.Screen name="+not-found" />
     </Stack>
   );

@@ -82,15 +82,14 @@ export const onboarding = [
   {
     id: 2,
     title: "Los mejores automoviles en tus manos con Ryde",
-    description:
-      "Discover the convenience of finding your perfect ride with Ryde",
+    description: "Descrubre las oportuniades de viaje que tenemos para ti.",
     image: images.onboarding2,
   },
   {
     id: 3,
     title: "Tu viaje, tu manera, Vamos!",
     description:
-      "Enter your destination, sit back, and let us take care of the rest.",
+      "Ingresa a tu destino, relajate y dejanos encargarnos del resto",
     image: images.onboarding3,
   },
 ];
