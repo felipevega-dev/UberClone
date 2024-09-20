@@ -1,18 +1,25 @@
-import { Stack, Tabs } from "expo-router";
-import { View, Image } from "react-native";
-import { icons } from "@/constants"; // Asegúrate de que los íconos estén importados correctamente
+import { Tabs } from "expo-router";
+import { View, Image, ImageSourcePropType } from "react-native";
+import { icons } from "@/constants";
 
-const TabIcon = ({ focused, source }) => (
-  <View>
-    <View>
+const TabIcon = ({
+  source,
+  focused,
+}: {
+  source: ImageSourcePropType;
+  focused: boolean;
+}) => (
+  <View
+    className={`flex flex-row justify-center items-center rounded-full ${focused ? "bg-general-300" : ""}`}
+  >
+    <View
+      className={`rounded-full w-12 h-12 items-center justify-center ${focused ? "bg-general-400" : ""}`}
+    >
       <Image
         source={source}
-        style={{
-          width: 24,
-          height: 24,
-          tintColor: focused ? "white" : "gray", // Cambia el color si está enfocado
-        }}
+        tintColor="white"
         resizeMode="contain"
+        className="w-7 h-7"
       />
     </View>
   </View>
@@ -22,11 +29,25 @@ const Layout = () => {
   return (
     <>
       <Tabs
-        initialRouteName="home"
+        initialRouteName="index"
         screenOptions={{
           tabBarActiveTintColor: "white",
-          tabBarInactiveTintColor: "gray", // Color para íconos no seleccionados
-          tabBarStyle: { backgroundColor: "#000" }, // Cambiar estilo del tab
+          tabBarInactiveTintColor: "white",
+          tabBarShowLabel: false,
+          tabBarStyle: {
+            backgroundColor: "#333333",
+            borderRadius: 50,
+            paddingBottom: 0,
+            overflow: "hidden",
+            marginHorizontal: 20,
+            marginBottom: 20,
+            height: 78,
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+            flexDirection: "row",
+            position: "absolute",
+          },
         }}
       >
         <Tabs.Screen
